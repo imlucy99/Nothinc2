@@ -63,7 +63,7 @@ body.preview .hud-wrap {
 
 .dial { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 
-.dial .tk { stroke: rgba(255, 255, 255, 0.2); transition: stroke 0.08s linear; }
+.dial .tk { stroke: rgba(255, 255, 255, 0.2); }
 .dial .tk.on { stroke: #ffffff; }
 .dial .tk.rl { stroke: rgba(255, 42, 47, 0.45); }
 .dial .tk.rl.on { stroke: var(--red); }
@@ -82,14 +82,10 @@ body.preview .hud-wrap {
 .dial .arc-lbl.warn { fill: var(--red); }
 .dial .scale-lbl { font-family: var(--ui); font-weight: 600; font-size: 11px; letter-spacing: 2px; fill: #5b606a; }
 
-.dial .seg { fill: rgba(255, 255, 255, 0.1); transition: fill 0.2s ease; }
-.dial .seg.on { fill: #e8e9ec; }
-.dial .seg.on.low { fill: var(--red); }
-.cluster.oil-warn .dial .oil-seg.on { fill: var(--yellow); }
-.cluster.oil-crit .dial .oil-seg.on { fill: var(--red); }
 
 /* Jarum: ditransform langsung lewat atribut oleh JS (tanpa transition, sudah di-smooth per frame) */
 .cluster.redline .dial #redline-arc,
+.cluster.redline .dial #redline-glow,
 .cluster.redline .dial .tk.rl.on { animation: blink 0.16s steps(2) infinite; }
 
 @keyframes blink { 50% { opacity: 0.25; } }
